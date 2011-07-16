@@ -7,14 +7,18 @@
 
 
 // Private Methods
-@interface NPReachability ()
+@interface BKReachability ()
 
 - (NSArray *)_handlers;
 
 @end
 
-
 // Private Functions
+void BKNetworkReachabilityCallBack(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void *info);
+const void *BKReachabilityRetain(const void *info);
+void BKReachabilityRelease(const void *info);
+CFStringRef BKReachabilityCopyDescription(const void *info);
+
 void BKNetworkReachabilityCallBack(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void *info) {
 	BKReachability *reach = (BKReachability *)info;
 	NSArray *allHandlers = [reach _handlers];
@@ -47,9 +51,9 @@ CFStringRef BKReachabilityCopyDescription(const void *info) {
 + (BKReachability *)sharedInstance;
 {
     static BKReachability *sharedInstance = nil;    
+
     static dispatch_once_t onceToken;
-    
-    dispatch_once(&onceToken ^{
+    dispatch_once(&onceToken, ^{
         sharedInstance = [[BKReachability alloc] init];
     });
         
@@ -103,9 +107,9 @@ CFStringRef BKReachabilityCopyDescription(const void *info) {
 	SCNetworkReachabilityContext context;
 	context.version = 0;
 	context.info = (void *)self;
-	context.retain = NPReachabilityRetain;
-	context.release = NPReachabilityRelease;
-	context.copyDescription = NPReachabilityCopyDescription;
+	context.retain = BKReachabilityRetain;
+	context.release = BKReachabilityRelease;
+	context.copyDescription = BKReachabilityCopyDescription;
 	
 	if (SCNetworkReachabilitySetCallback(_reachabilityRef, BKNetworkReachabilityCallBack, &context)) {
 		SCNetworkReachabilityScheduleWithRunLoop(_reachabilityRef, CFRunLoopGetCurrent(), kCFRunLoopCommonModes);

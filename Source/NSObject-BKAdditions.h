@@ -14,4 +14,7 @@
 - (void)performAfterDelay:(NSTimeInterval)delay usingBlock:(BKVoidBlock)block;
 - (void)performOnMainThreadUsingBlock:(BKVoidBlock)block;
 
++ (void)swizzleInstanceSelector:(SEL)origSelector withNewSelector:(SEL)newSelector;
+- (void *)associationKeyForPropertyName:(NSString *)propertyName;
+
 @end

@@ -9,6 +9,8 @@
 typedef void (^BKVoidBlock)(void);
 typedef void (^BKCompletionBlock)(BOOL finished);
 typedef void (^BKContextBlock)(CGContextRef context);
+typedef void (^BKRectBlock)(CGRect rect);
 typedef id (^BKCacheBlock)();
 typedef void (^BKIndexPathBlock)(NSIndexPath *indexPath);
 typedef void (^BKButtonIndexBlock)(NSInteger buttonIndex);
+typedef void (^BKConnectionCompletionBlock)(NSData *responseData, NSURLResponse *urlResponse, NSError *error);

@@ -25,7 +25,8 @@
 
 - (void)dealloc;
 {
-    CCDealloc(sections);
+    [sections release];
+    sections = nil;
     
     [super dealloc];
 }
