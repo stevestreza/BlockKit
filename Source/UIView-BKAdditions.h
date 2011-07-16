@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BKTypes.h"
 
 @interface UIView (BKAdditions)
 
 // Block based -drawRect:
 // WARNING: -initWithDrawRectBlock: must be used to initialize
-- (id)initWithDrawRectBlock:(void (^) (CGRect))aDrawRectBlock;
-- (void)setDrawRectBlock:(void (^) (CGRect))newDrawRectBlock;
-- (void (^) (CGRect))drawRectBlock;
+- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
+- (void)setDrawRectBlock:(BKRectBlock)newDrawRectBlock;
+- (BKRectBlock)drawRectBlock;
 
 @end

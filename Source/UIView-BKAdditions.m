@@ -10,16 +10,16 @@
 #import "NSObject-BKAdditions.h"
 
 @interface BKDrawRectBlockView : UIView
-@property (nonatomic, copy) void (^internalDrawRectBlock)(CGRect dirtyRect);
+@property (nonatomic, copy) BKRectBlock internalDrawRectBlock;
 
-- (id)initWithDrawRectBlock:(void (^) (CGRect))aDrawRectBlock;
+- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 @end
 
 @implementation BKDrawRectBlockView
 
 @synthesize internalDrawRectBlock;
 
-- (id)initWithDrawRectBlock:(void (^) (CGRect))aDrawRectBlock;
+- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 {
     if ((self = [super initWithFrame:CGRectZero])) {
         internalDrawRectBlock = [aDrawRectBlock copy];
@@ -42,7 +42,7 @@
     }
 }
 
-- (void)setInternalDrawRectBlock:(void (^)(CGRect))newInternalDrawRectBlock;
+- (void)setInternalDrawRectBlock:(BKRectBlock)newInternalDrawRectBlock;
 {
     if (newInternalDrawRectBlock != internalDrawRectBlock) {
         [internalDrawRectBlock autorelease];
@@ -56,20 +56,20 @@
 
 @implementation UIView (BKAdditions)
 
-- (id)initWithDrawRectBlock:(void (^) (CGRect))aDrawRectBlock;
+- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 {
     BKDrawRectBlockView *drawRectBlockView = [[BKDrawRectBlockView alloc] initWithDrawRectBlock:aDrawRectBlock];
     return drawRectBlockView;
 }
 
-- (void)setDrawRectBlock:(void (^) (CGRect))newDrawRectBlock;
+- (void)setDrawRectBlock:(BKRectBlock)newDrawRectBlock;
 {
     if ([self isKindOfClass:[BKDrawRectBlockView class]] && [self respondsToSelector:@selector(setInternalDrawRectBlock:)]) {
         [(BKDrawRectBlockView *)self setInternalDrawRectBlock:newDrawRectBlock];
     }
 }
 
-- (void (^) (CGRect))drawRectBlock;
+- (BKRectBlock)drawRectBlock;
 {
     if ([self isKindOfClass:[BKDrawRectBlockView class]] && [self respondsToSelector:@selector(internalDrawRectBlock)]) {
         return [(BKDrawRectBlockView *)self internalDrawRectBlock];

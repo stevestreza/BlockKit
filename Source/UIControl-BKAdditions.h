@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BKTypes.h"
 
 @interface UIControl (BKAdditions)
 
-- (void)addActionForControlEvents:(UIControlEvents)controlEvents usingBlock:(void (^) (void))block;
+- (void)addActionForControlEvents:(UIControlEvents)controlEvents usingBlock:(BKVoidBlock)block;
 - (void)removeAllBlocks;
 
 @end

@@ -10,10 +10,10 @@
 #import "NSObject-BKAdditions.h"
 
 @interface BKVoidBlockWrapper : NSObject
-@property (nonatomic, copy) void (^block) (void);
+@property (nonatomic, copy) BKVoidBlock block;
 @property (nonatomic, retain) id userInfo;
 
-- (id)initWithBlock:(void (^) (void))aBlock userInfo:(id)someUserInfo;
+- (id)initWithBlock:(BKVoidBlock)aBlock userInfo:(id)someUserInfo;
 - (void)performBlock;
 @end
 
@@ -22,7 +22,7 @@
 @synthesize block;
 @synthesize userInfo;
 
-- (id)initWithBlock:(void (^) (void))aBlock userInfo:(id)someUserInfo;
+- (id)initWithBlock:(BKVoidBlock)aBlock userInfo:(id)someUserInfo;
 {
     if ((self = [super init])) {
         block = [aBlock copy];
@@ -60,7 +60,7 @@
     });
 }
 
-- (void)addActionForControlEvents:(UIControlEvents)controlEvents usingBlock:(void (^) (void))block;
+- (void)addActionForControlEvents:(UIControlEvents)controlEvents usingBlock:(BKVoidBlock)block;
 {
     BKVoidBlockWrapper *blockWrapper = [[BKVoidBlockWrapper alloc] initWithBlock:block userInfo:[NSNumber numberWithInteger:controlEvents]];
     [self addTarget:blockWrapper action:@selector(performBlock) forControlEvents:controlEvents];
