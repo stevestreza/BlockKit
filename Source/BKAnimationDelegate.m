@@ -19,7 +19,7 @@
 
 + (void)startAnimation:(CAAnimation *)animation view:(UIView *)view key:(NSString *)key completionBlock:(BKVoidBlock)block;
 {
-    CCAnimationDelegate *delegate = [[[[self class] alloc] init] autorelease];
+    BKAnimationDelegate *delegate = [[[[self class] alloc] init] autorelease];
 
     delegate.animation = animation;
     delegate.view = view;

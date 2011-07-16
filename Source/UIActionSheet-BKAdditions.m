@@ -33,7 +33,7 @@
 
 - (void)showFromView:(UIView *)view buttonBlock:(BKButtonIndexBlock)block;
 {
-    CCActionSheetDelegate *sheetDelegate = [[BKActionSheetDelegate alloc] init];
+    BKActionSheetDelegate *sheetDelegate = [[BKActionSheetDelegate alloc] init];
     sheetDelegate.buttonBlock = block;
     self.delegate = sheetDelegate;
     

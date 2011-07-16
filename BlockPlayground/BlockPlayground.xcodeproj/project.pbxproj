@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F13EAA7F13D25084008C9BD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA7E13D25084008C9BD2 /* UIKit.framework */; };
+		F13EAA8113D25084008C9BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8013D25084008C9BD2 /* Foundation.framework */; };
+		F13EAA8313D25084008C9BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8213D25084008C9BD2 /* CoreGraphics.framework */; };
+		F13EAA8913D25084008C9BD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F13EAA8713D25084008C9BD2 /* InfoPlist.strings */; };
+		F13EAA8B13D25085008C9BD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAA8A13D25084008C9BD2 /* main.m */; };
+		F13EAA8F13D25085008C9BD2 /* BlockPlaygroundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAA8E13D25085008C9BD2 /* BlockPlaygroundAppDelegate.m */; };
+		F13EAA9113D25085008C9BD2 /* BlockPlaygroundViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = F13EAA9013D25085008C9BD2 /* BlockPlaygroundViewController.h */; };
+		F13EAA9313D25085008C9BD2 /* BlockPlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAA9213D25085008C9BD2 /* BlockPlaygroundViewController.m */; };
+		F13EAA9613D25085008C9BD2 /* BlockPlaygroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13EAA9413D25085008C9BD2 /* BlockPlaygroundViewController.xib */; };
+		F13EAABA13D251D2008C9BD2 /* BKAnimationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAA013D251D2008C9BD2 /* BKAnimationDelegate.m */; };
+		F13EAABB13D251D2008C9BD2 /* BKBlockTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAA213D251D2008C9BD2 /* BKBlockTableViewDataSource.m */; };
+		F13EAABC13D251D2008C9BD2 /* BKCoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAA413D251D2008C9BD2 /* BKCoreGraphics.m */; };
+		F13EAABE13D251D2008C9BD2 /* CATransaction-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAA913D251D2008C9BD2 /* CATransaction-BKAdditions.m */; };
+		F13EAABF13D251D2008C9BD2 /* NSArray-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAAB13D251D2008C9BD2 /* NSArray-BKAdditions.m */; };
+		F13EAAC013D251D2008C9BD2 /* NSCache-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */; };
+		F13EAAC113D251D2008C9BD2 /* NSObject-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */; };
+		F13EAAC213D251D2008C9BD2 /* UIActionSheet-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB113D251D2008C9BD2 /* UIActionSheet-BKAdditions.m */; };
+		F13EAAC313D251D2008C9BD2 /* UIAlertView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB313D251D2008C9BD2 /* UIAlertView-BKAdditions.m */; };
+		F13EAAC413D251D2008C9BD2 /* UIControl-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB513D251D2008C9BD2 /* UIControl-BKAdditions.m */; };
+		F13EAAC513D251D2008C9BD2 /* UIImage-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB713D251D2008C9BD2 /* UIImage-BKAdditions.m */; };
+		F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */; };
+		F13EAAC813D25219008C9BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAAC713D25219008C9BD2 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F13EAA7A13D25084008C9BD2 /* BlockPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13EAA7E13D25084008C9BD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F13EAA8013D25084008C9BD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F13EAA8213D25084008C9BD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F13EAA8613D25084008C9BD2 /* BlockPlayground-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockPlayground-Info.plist"; sourceTree = "<group>"; };
+		F13EAA8813D25084008C9BD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F13EAA8A13D25084008C9BD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F13EAA8C13D25085008C9BD2 /* BlockPlayground-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockPlayground-Prefix.pch"; sourceTree = "<group>"; };
+		F13EAA8D13D25085008C9BD2 /* BlockPlaygroundAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockPlaygroundAppDelegate.h; sourceTree = "<group>"; };
+		F13EAA8E13D25085008C9BD2 /* BlockPlaygroundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockPlaygroundAppDelegate.m; sourceTree = "<group>"; };
+		F13EAA9013D25085008C9BD2 /* BlockPlaygroundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockPlaygroundViewController.h; sourceTree = "<group>"; };
+		F13EAA9213D25085008C9BD2 /* BlockPlaygroundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockPlaygroundViewController.m; sourceTree = "<group>"; };
+		F13EAA9513D25085008C9BD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BlockPlaygroundViewController.xib; sourceTree = "<group>"; };
+		F13EAA9F13D251D2008C9BD2 /* BKAnimationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKAnimationDelegate.h; sourceTree = "<group>"; };
+		F13EAAA013D251D2008C9BD2 /* BKAnimationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKAnimationDelegate.m; sourceTree = "<group>"; };
+		F13EAAA113D251D2008C9BD2 /* BKBlockTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBlockTableViewDataSource.h; sourceTree = "<group>"; };
+		F13EAAA213D251D2008C9BD2 /* BKBlockTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBlockTableViewDataSource.m; sourceTree = "<group>"; };
+		F13EAAA313D251D2008C9BD2 /* BKCoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCoreGraphics.h; sourceTree = "<group>"; };
+		F13EAAA413D251D2008C9BD2 /* BKCoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCoreGraphics.m; sourceTree = "<group>"; };
+		F13EAAA513D251D2008C9BD2 /* BKReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReachability.h; sourceTree = "<group>"; };
+		F13EAAA613D251D2008C9BD2 /* BKReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKReachability.m; sourceTree = "<group>"; };
+		F13EAAA713D251D2008C9BD2 /* BKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTypes.h; sourceTree = "<group>"; };
+		F13EAAA813D251D2008C9BD2 /* CATransaction-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransaction-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAA913D251D2008C9BD2 /* CATransaction-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAAA13D251D2008C9BD2 /* NSArray-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAAB13D251D2008C9BD2 /* NSArray-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAAC13D251D2008C9BD2 /* NSCache-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAAE13D251D2008C9BD2 /* NSObject-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAB013D251D2008C9BD2 /* UIActionSheet-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAB113D251D2008C9BD2 /* UIActionSheet-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAB213D251D2008C9BD2 /* UIAlertView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAB313D251D2008C9BD2 /* UIAlertView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAB413D251D2008C9BD2 /* UIControl-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAB513D251D2008C9BD2 /* UIControl-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAB613D251D2008C9BD2 /* UIImage-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAB713D251D2008C9BD2 /* UIImage-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAB813D251D2008C9BD2 /* UIView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAAC713D25219008C9BD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13EAA7713D25084008C9BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13EAAC813D25219008C9BD2 /* QuartzCore.framework in Frameworks */,
+				F13EAA7F13D25084008C9BD2 /* UIKit.framework in Frameworks */,
+				F13EAA8113D25084008C9BD2 /* Foundation.framework in Frameworks */,
+				F13EAA8313D25084008C9BD2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F13EAA6F13D25084008C9BD2 = {
+			isa = PBXGroup;
+			children = (
+				F13EAAC713D25219008C9BD2 /* QuartzCore.framework */,
+				F13EAA8413D25084008C9BD2 /* BlockPlayground */,
+				F13EAA7D13D25084008C9BD2 /* Frameworks */,
+				F13EAA7B13D25084008C9BD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F13EAA7B13D25084008C9BD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13EAA7A13D25084008C9BD2 /* BlockPlayground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13EAA7D13D25084008C9BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F13EAA7E13D25084008C9BD2 /* UIKit.framework */,
+				F13EAA8013D25084008C9BD2 /* Foundation.framework */,
+				F13EAA8213D25084008C9BD2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13EAA8413D25084008C9BD2 /* BlockPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				F13EAA8D13D25085008C9BD2 /* BlockPlaygroundAppDelegate.h */,
+				F13EAA8E13D25085008C9BD2 /* BlockPlaygroundAppDelegate.m */,
+				F13EAA9013D25085008C9BD2 /* BlockPlaygroundViewController.h */,
+				F13EAA9213D25085008C9BD2 /* BlockPlaygroundViewController.m */,
+				F13EAA9413D25085008C9BD2 /* BlockPlaygroundViewController.xib */,
+				F13EAA9E13D251D2008C9BD2 /* BlockKit */,
+				F13EAA8513D25084008C9BD2 /* Supporting Files */,
+			);
+			path = BlockPlayground;
+			sourceTree = "<group>";
+		};
+		F13EAA8513D25084008C9BD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F13EAA8613D25084008C9BD2 /* BlockPlayground-Info.plist */,
+				F13EAA8713D25084008C9BD2 /* InfoPlist.strings */,
+				F13EAA8A13D25084008C9BD2 /* main.m */,
+				F13EAA8C13D25085008C9BD2 /* BlockPlayground-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F13EAA9E13D251D2008C9BD2 /* BlockKit */ = {
+			isa = PBXGroup;
+			children = (
+				F13EAA9F13D251D2008C9BD2 /* BKAnimationDelegate.h */,
+				F13EAAA013D251D2008C9BD2 /* BKAnimationDelegate.m */,
+				F13EAAA113D251D2008C9BD2 /* BKBlockTableViewDataSource.h */,
+				F13EAAA213D251D2008C9BD2 /* BKBlockTableViewDataSource.m */,
+				F13EAAA313D251D2008C9BD2 /* BKCoreGraphics.h */,
+				F13EAAA413D251D2008C9BD2 /* BKCoreGraphics.m */,
+				F13EAAA513D251D2008C9BD2 /* BKReachability.h */,
+				F13EAAA613D251D2008C9BD2 /* BKReachability.m */,
+				F13EAAA713D251D2008C9BD2 /* BKTypes.h */,
+				F13EAAA813D251D2008C9BD2 /* CATransaction-BKAdditions.h */,
+				F13EAAA913D251D2008C9BD2 /* CATransaction-BKAdditions.m */,
+				F13EAAAA13D251D2008C9BD2 /* NSArray-BKAdditions.h */,
+				F13EAAAB13D251D2008C9BD2 /* NSArray-BKAdditions.m */,
+				F13EAAAC13D251D2008C9BD2 /* NSCache-BKAdditions.h */,
+				F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */,
+				F13EAAAE13D251D2008C9BD2 /* NSObject-BKAdditions.h */,
+				F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */,
+				F13EAAB013D251D2008C9BD2 /* UIActionSheet-BKAdditions.h */,
+				F13EAAB113D251D2008C9BD2 /* UIActionSheet-BKAdditions.m */,
+				F13EAAB213D251D2008C9BD2 /* UIAlertView-BKAdditions.h */,
+				F13EAAB313D251D2008C9BD2 /* UIAlertView-BKAdditions.m */,
+				F13EAAB413D251D2008C9BD2 /* UIControl-BKAdditions.h */,
+				F13EAAB513D251D2008C9BD2 /* UIControl-BKAdditions.m */,
+				F13EAAB613D251D2008C9BD2 /* UIImage-BKAdditions.h */,
+				F13EAAB713D251D2008C9BD2 /* UIImage-BKAdditions.m */,
+				F13EAAB813D251D2008C9BD2 /* UIView-BKAdditions.h */,
+				F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */,
+			);
+			name = BlockKit;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13EAA7913D25084008C9BD2 /* BlockPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13EAA9913D25085008C9BD2 /* Build configuration list for PBXNativeTarget "BlockPlayground" */;
+			buildPhases = (
+				F13EAA7613D25084008C9BD2 /* Sources */,
+				F13EAA7713D25084008C9BD2 /* Frameworks */,
+				F13EAA7813D25084008C9BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockPlayground;
+			productName = BlockPlayground;
+			productReference = F13EAA7A13D25084008C9BD2 /* BlockPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13EAA7113D25084008C9BD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Linebreak;
+			};
+			buildConfigurationList = F13EAA7413D25084008C9BD2 /* Build configuration list for PBXProject "BlockPlayground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F13EAA6F13D25084008C9BD2;
+			productRefGroup = F13EAA7B13D25084008C9BD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13EAA7913D25084008C9BD2 /* BlockPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13EAA7813D25084008C9BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13EAA8913D25084008C9BD2 /* InfoPlist.strings in Resources */,
+				F13EAA9113D25085008C9BD2 /* BlockPlaygroundViewController.h in Resources */,
+				F13EAA9613D25085008C9BD2 /* BlockPlaygroundViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13EAA7613D25084008C9BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13EAA8B13D25085008C9BD2 /* main.m in Sources */,
+				F13EAA8F13D25085008C9BD2 /* BlockPlaygroundAppDelegate.m in Sources */,
+				F13EAA9313D25085008C9BD2 /* BlockPlaygroundViewController.m in Sources */,
+				F13EAABA13D251D2008C9BD2 /* BKAnimationDelegate.m in Sources */,
+				F13EAABB13D251D2008C9BD2 /* BKBlockTableViewDataSource.m in Sources */,
+				F13EAABC13D251D2008C9BD2 /* BKCoreGraphics.m in Sources */,
+				F13EAABE13D251D2008C9BD2 /* CATransaction-BKAdditions.m in Sources */,
+				F13EAABF13D251D2008C9BD2 /* NSArray-BKAdditions.m in Sources */,
+				F13EAAC013D251D2008C9BD2 /* NSCache-BKAdditions.m in Sources */,
+				F13EAAC113D251D2008C9BD2 /* NSObject-BKAdditions.m in Sources */,
+				F13EAAC213D251D2008C9BD2 /* UIActionSheet-BKAdditions.m in Sources */,
+				F13EAAC313D251D2008C9BD2 /* UIAlertView-BKAdditions.m in Sources */,
+				F13EAAC413D251D2008C9BD2 /* UIControl-BKAdditions.m in Sources */,
+				F13EAAC513D251D2008C9BD2 /* UIImage-BKAdditions.m in Sources */,
+				F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F13EAA8713D25084008C9BD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13EAA8813D25084008C9BD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F13EAA9413D25085008C9BD2 /* BlockPlaygroundViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13EAA9513D25085008C9BD2 /* en */,
+			);
+			name = BlockPlaygroundViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F13EAA9713D25085008C9BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F13EAA9813D25085008C9BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F13EAA9A13D25085008C9BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockPlayground/BlockPlayground-Prefix.pch";
+				INFOPLIST_FILE = "BlockPlayground/BlockPlayground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F13EAA9B13D25085008C9BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockPlayground/BlockPlayground-Prefix.pch";
+				INFOPLIST_FILE = "BlockPlayground/BlockPlayground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13EAA7413D25084008C9BD2 /* Build configuration list for PBXProject "BlockPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13EAA9713D25085008C9BD2 /* Debug */,
+				F13EAA9813D25085008C9BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13EAA9913D25085008C9BD2 /* Build configuration list for PBXNativeTarget "BlockPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13EAA9A13D25085008C9BD2 /* Debug */,
+				F13EAA9B13D25085008C9BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13EAA7113D25084008C9BD2 /* Project object */;
+}

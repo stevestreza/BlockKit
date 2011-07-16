@@ -14,10 +14,10 @@
 
 + (NSCache *)sharedCache;
 {
-    static dispatch_once_t onceToken;
     static NSCache *sharedCache = nil;
     
-    dispatch_once(&onceToken ^{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         sharedCache = [[NSCache alloc] init];
     });
         

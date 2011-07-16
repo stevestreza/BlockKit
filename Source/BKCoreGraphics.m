@@ -8,7 +8,7 @@
 #import "BKCoreGraphics.h"
 
 
-void BKContextGStateBlock(CGContextRef context, BKVoidBlock block);
+void BKContextGStateBlock(CGContextRef context, BKVoidBlock block)
 {
     CGContextSaveGState(context);
     if (block) {
