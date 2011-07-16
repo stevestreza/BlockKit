@@ -29,6 +29,7 @@
 		F13EAAC513D251D2008C9BD2 /* UIImage-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB713D251D2008C9BD2 /* UIImage-BKAdditions.m */; };
 		F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */; };
 		F13EAAC813D25219008C9BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAAC713D25219008C9BD2 /* QuartzCore.framework */; };
+		F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		F13EAAB813D251D2008C9BD2 /* UIView-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView-BKAdditions.h"; sourceTree = "<group>"; };
 		F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView-BKAdditions.m"; sourceTree = "<group>"; };
 		F13EAAC713D25219008C9BD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F13EAAC913D25553008C9BD2 /* NSURLConnection-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection-BKAdditions.h"; sourceTree = "<group>"; };
+		F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection-BKAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */,
 				F13EAAAE13D251D2008C9BD2 /* NSObject-BKAdditions.h */,
 				F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */,
+				F13EAAC913D25553008C9BD2 /* NSURLConnection-BKAdditions.h */,
+				F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */,
 				F13EAAB013D251D2008C9BD2 /* UIActionSheet-BKAdditions.h */,
 				F13EAAB113D251D2008C9BD2 /* UIActionSheet-BKAdditions.m */,
 				F13EAAB213D251D2008C9BD2 /* UIAlertView-BKAdditions.h */,
@@ -256,6 +261,7 @@
 				F13EAAC413D251D2008C9BD2 /* UIControl-BKAdditions.m in Sources */,
 				F13EAAC513D251D2008C9BD2 /* UIImage-BKAdditions.m in Sources */,
 				F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */,
+				F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
