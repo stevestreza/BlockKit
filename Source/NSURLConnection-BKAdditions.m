@@ -7,6 +7,9 @@
 //
 
 #import "NSURLConnection-BKAdditions.h"
+#import <objc/runtime.h>
+#import "NSObject-BKAdditions.h"
+#import "NSString-BKAdditions.h"
 
 
 // Private Classes
@@ -81,13 +84,26 @@
 
 @end
 
+@interface NSURLConnection (BKAdditionsPrivate)
+@property (nonatomic, retain) BKURLConnectionDelegateWrapper *delegateWrapper;
+@end
 
 @implementation NSURLConnection (BKAdditions)
+
+- (id)initWithRequest:(NSURLRequest *)request;
+{
+    BKURLConnectionDelegateWrapper *wrapper = [[BKURLConnectionDelegateWrapper alloc] initWithCompletionBlock:nil];
+    NSURLConnection *retConnection = [self initWithRequest:request delegate:wrapper startImmediately:NO];
+    retConnection.delegateWrapper = wrapper;
+    [wrapper release];
+    return retConnection;
+}
 
 - (id)initWithRequest:(NSURLRequest *)request completionBlock:(BKConnectionCompletionBlock)completionBlock;
 {
     BKURLConnectionDelegateWrapper *wrapper = [[BKURLConnectionDelegateWrapper alloc] initWithCompletionBlock:completionBlock];
-    id retConnection = [self initWithRequest:request delegate:wrapper];
+    NSURLConnection *retConnection = [self initWithRequest:request delegate:wrapper];
+    retConnection.delegateWrapper = wrapper;
     [wrapper release];
     return retConnection;
 }
@@ -95,9 +111,27 @@
 - (id)initWithRequest:(NSURLRequest *)request startImmediately:(BOOL)startImmediately completionBlock:(BKConnectionCompletionBlock)completionBlock;
 {
     BKURLConnectionDelegateWrapper *wrapper = [[BKURLConnectionDelegateWrapper alloc] initWithCompletionBlock:completionBlock];
-    id retConnection = [self initWithRequest:request delegate:wrapper startImmediately:startImmediately];
+    NSURLConnection *retConnection = [self initWithRequest:request delegate:wrapper startImmediately:startImmediately];
+    retConnection.delegateWrapper = wrapper;
     [wrapper release];
     return retConnection;
+}
+
+- (void)startWithCompletionBlock:(BKConnectionCompletionBlock)completionBlock;
+{
+    self.delegateWrapper.completionBlock = completionBlock;
+    
+    [self start];
+}
+
+- (BKURLConnectionDelegateWrapper *)delegateWrapper;
+{
+    return objc_getAssociatedObject(self, [self associationKeyForPropertyName:NSStringFromSelector(_cmd)]);
+}
+
+- (void)setDelegateWrapper:(BKURLConnectionDelegateWrapper *)newDelegateWrapper;
+{
+    objc_setAssociatedObject(self, [self associationKeyForPropertyName:[NSStringFromSelector(_cmd) getterMethodString]], newDelegateWrapper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

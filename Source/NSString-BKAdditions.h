@@ -12,5 +12,6 @@
 @interface NSString (BKAdditions)
 
 - (void)enumerateCharactersUsingBlock:(BKUniCharBlock)characterBlock;
+- (NSString *)getterMethodString;
 
 @end

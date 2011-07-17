@@ -12,7 +12,10 @@
 
 @interface NSURLConnection (BKAdditions)
 
+- (id)initWithRequest:(NSURLRequest *)request;
 - (id)initWithRequest:(NSURLRequest *)request completionBlock:(BKConnectionCompletionBlock)completionBlock;
 - (id)initWithRequest:(NSURLRequest *)request startImmediately:(BOOL)startImmediately completionBlock:(BKConnectionCompletionBlock)completionBlock;
+
+- (void)startWithCompletionBlock:(BKConnectionCompletionBlock)completionBlock;
 
 @end

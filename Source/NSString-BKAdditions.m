@@ -18,4 +18,26 @@
     }
 }
 
+- (NSString *)getterMethodString;
+{
+    NSMutableString *retString = [[self mutableCopy] autorelease];
+    NSString *setConstant = @"set";
+    if ([retString hasPrefix:setConstant]) {
+        [retString deleteCharactersInRange:NSMakeRange(0, setConstant.length)];
+    } else {
+        return self;
+    }
+    
+    if (retString.length > 0) {
+        [retString replaceCharactersInRange:NSMakeRange(0, 1) withString:[[retString substringToIndex:1] lowercaseString]];
+    }
+    
+    NSString *endSentinal = @":";
+    if ([retString hasSuffix:endSentinal]) {
+        [retString deleteCharactersInRange:NSMakeRange(retString.length - 1, endSentinal.length)];
+    }
+    
+    return retString;
+}
+
 @end
