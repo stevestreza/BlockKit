@@ -16,5 +16,6 @@
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 
 @property (nonatomic, copy) BKRectBlock drawRectBlock;
+@property (nonatomic, copy) BKVoidBlock layoutSubviewsBlock;
 
 @end

@@ -38,39 +38,41 @@
     
     [blockView release];
     
-    __block BOOL isRed = NO; // Must be NO because __block causes it to stick around, and -drawRect gets called on the next run loop pass
     UIButton *tempButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [tempButton setTitle:@"Change Color" forState:UIControlStateNormal];
     
-    [tempButton addActionForControlEvents:UIControlEventTouchUpInside usingBlock:^{
-        safeself.view.drawRectBlock = ^(CGRect dirtyRect) {
-            [isRed ? [UIColor greenColor] : [UIColor redColor] set];
-            [[UIBezierPath bezierPathWithRect:safeself.view.bounds] fill];
-        };
-        isRed = !isRed;
-    }];
+    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    greenView.backgroundColor = [UIColor greenColor];
     
-    self.view.drawRectBlock = nil;
+    self.view.drawRectBlock = ^(CGRect dirtyRect) {
+        [[UIColor redColor] set];
+        [[UIBezierPath bezierPathWithRect:safeself.view.bounds] fill]; 
+    };
+    
+    self.view.layoutSubviewsBlock = ^{
+        greenView.frame = CGRectMake(0, 0, 10, 10);
+    };
     
     CGFloat buttonWidth = 200.0f;
     tempButton.frame = CGRectMake(floorf((CGRectGetWidth(self.view.frame) - buttonWidth) / 2), 50, buttonWidth, 44);
     
     [self.view addSubview:tempButton];
+    [self.view addSubview:greenView];
     
     [blockView performSelector:@selector(testLog) withObject:nil afterDelay:2.0];
     
     /* NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com/"]];
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request];
-    
-    [connection startWithCompletionBlock:^(NSData *responseData, NSURLResponse *urlResponse, NSError *error) {
-        if (!error) {
-            NSLog(@"Response String: %@", [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
-        } else {
-            NSLog(@"Response Error: %@", error);
-        }
-    }];
-
-    [connection release]; */
+     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request];
+     
+     [connection startWithCompletionBlock:^(NSData *responseData, NSURLResponse *urlResponse, NSError *error) {
+     if (!error) {
+     NSLog(@"Response String: %@", [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
+     } else {
+     NSLog(@"Response Error: %@", error);
+     }
+     }];
+     
+     [connection release]; */
 }
 
 - (void)viewDidUnload

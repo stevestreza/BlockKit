@@ -19,6 +19,21 @@
 @implementation UIView (BKAdditions)
 
 @dynamic drawRectBlock;
+@dynamic layoutSubviewsBlock;
+
++ (void)initialize;
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method deallocMethod = class_getInstanceMethod(self, @selector(dealloc));
+        Method bkDeallocMethod = class_getInstanceMethod(self, @selector(bk_dealloc));
+        method_exchangeImplementations(bkDeallocMethod, deallocMethod);
+        
+        Method layoutSubviewsMethod = class_getInstanceMethod(self, @selector(layoutSubviews));
+        Method bkLayoutSubviewsMethod = class_getInstanceMethod(self, @selector(bk_layoutSubviews));
+        method_exchangeImplementations(bkLayoutSubviewsMethod, layoutSubviewsMethod);
+    });
+}
 
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 {
@@ -28,6 +43,17 @@
     [drawRectBlockView setDrawRectBlock:aDrawRectBlock];
     
     return drawRectBlockView;
+}
+
+- (BKVoidBlock)layoutSubviewsBlock;
+{
+    return objc_getAssociatedObject(self, [self associationKeyForPropertyName:NSStringFromSelector(_cmd)]);
+}
+
+- (void)setLayoutSubviewsBlock:(BKVoidBlock)layoutSubviewsBlock;
+{
+    objc_setAssociatedObject(self, [self associationKeyForPropertyName:[NSStringFromSelector(_cmd) getterMethodString]], layoutSubviewsBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self setNeedsLayout];
 }
 
 #pragma mark - BKAdditionsPrivate
@@ -53,6 +79,10 @@ static void BKDrawRectBlockViewBKDealloc(id self, SEL _cmd) {
         [self setDrawRectBlock:nil];
     }
     
+    if ([self respondsToSelector:@selector(setLayoutSubviewsBlock:)]) {
+        [self setLayoutSubviewsBlock:nil];
+    }
+    
     if ([self respondsToSelector:@selector(bk_dealloc)]) {
         [self performSelector:@selector(bk_dealloc)];
     }
@@ -72,13 +102,6 @@ static BKRectBlock BKDrawRectBlockViewDrawRectBlock(id self, SEL _cmd) {
 {
     NSString *subclassName = [@"BKDrawRect_" stringByAppendingString:NSStringFromClass(class)];
     Class drawRectSubclass = objc_allocateClassPair(class, [subclassName UTF8String], 0);
-    
-    
-    SEL bkDeallocSelector = @selector(bk_dealloc);
-    Method deallocMethod = class_getInstanceMethod(drawRectSubclass, @selector(dealloc));
-    class_addMethod(drawRectSubclass, bkDeallocSelector, (IMP)BKDrawRectBlockViewBKDealloc, method_getTypeEncoding(deallocMethod));
-    Method bkDeallocMethod = class_getInstanceMethod(drawRectSubclass, bkDeallocSelector);
-    method_exchangeImplementations(bkDeallocMethod, deallocMethod);
     
     SEL bkDrawRectSelector = @selector(bk_drawRect:);
     Method drawRectMethod = class_getInstanceMethod(drawRectSubclass, @selector(drawRect:));
@@ -101,6 +124,15 @@ static BKRectBlock BKDrawRectBlockViewDrawRectBlock(id self, SEL _cmd) {
     
     objc_registerClassPair(drawRectSubclass);
     return drawRectSubclass;
+}
+
+- (void)bk_layoutSubviews;
+{
+    if (self.layoutSubviewsBlock) {
+        self.layoutSubviewsBlock();
+    } else {
+        [self bk_layoutSubviews];
+    }
 }
 
 @end
