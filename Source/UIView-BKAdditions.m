@@ -9,11 +9,15 @@
 #import "UIView-BKAdditions.h"
 #import "NSObject-BKAdditions.h"
 
+
 @interface BKDrawRectBlockView : UIView
+
 @property (nonatomic, copy) BKRectBlock internalDrawRectBlock;
 
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
+
 @end
+
 
 @implementation BKDrawRectBlockView
 
@@ -53,6 +57,7 @@
 }
 
 @end
+
 
 @implementation UIView (BKAdditions)
 

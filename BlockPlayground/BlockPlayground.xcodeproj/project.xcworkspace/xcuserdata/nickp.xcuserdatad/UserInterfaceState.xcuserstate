@@ -1529,7 +1529,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332558580.25160199</real>
+		<real>332558750.42214602</real>
 		<string>{0, 480}</string>
 		<string>{473, 0}</string>
 		<string>@interface NSObject(BKAdditions)</string>
@@ -7096,7 +7096,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558580.24823803</real>
+		<real>332558750.41874999</real>
 		<string>{0, 480}</string>
 		<string>{473, 0}</string>
 		<dict>
@@ -7191,9 +7191,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332551488.054878</real>
-		<string>{738, 1216}</string>
-		<string>{1698, 0}</string>
+		<real>332558750.41854799</real>
+		<string>{0, 887}</string>
+		<string>{316, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7621,7 +7621,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558580.24802101</real>
+		<real>332558604.94537902</real>
 		<string>{2371, 1614}</string>
 		<string>{2415, 0}</string>
 		<dict>
@@ -7669,8 +7669,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558575.41358501</real>
-		<string>{576, 1800}</string>
+		<real>332558650.41166598</real>
+		<string>{1190, 1487}</string>
 		<string>{1897, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -8359,7 +8359,7 @@
 				<integer>601</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIView-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8395,7 +8395,7 @@
 				<integer>605</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundViewController.h</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8413,7 +8413,7 @@
 				<integer>607</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundAppDelegate.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8431,7 +8431,7 @@
 				<integer>609</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSString-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundAppDelegate.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8449,7 +8449,7 @@
 				<integer>611</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.h</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSString-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8467,7 +8467,7 @@
 				<integer>613</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/DeveloperBeta/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/objc/runtime.h</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8485,7 +8485,7 @@
 				<integer>615</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSString-BKAdditions.h</string>
+		<string>file://localhost/DeveloperBeta/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/objc/runtime.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8503,7 +8503,7 @@
 				<integer>617</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSObject-BKAdditions.h</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSString-BKAdditions.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8521,7 +8521,7 @@
 				<integer>619</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIActionSheet-BKAdditions.h</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSObject-BKAdditions.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -17019,7 +17019,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1165</integer>
+					<integer>1163</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -17122,7 +17122,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>NSURLConnection-BKAdditions.m</string>
+		<string>UIView-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -17380,7 +17380,7 @@
 			</array>
 		</dict>
 		<string>BlockPlayground</string>
-		<string>NSURLConnection-BKAdditions.m</string>
+		<string>UIView-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -17855,11 +17855,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1122</integer>
+					<integer>1121</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1137</integer>
+					<integer>1136</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -17871,11 +17871,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1158</integer>
+					<integer>1156</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1164</integer>
+					<integer>1162</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -17902,7 +17902,7 @@
 			<key>rootLayoutTreeNode</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1120</integer>
+				<integer>1119</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -17928,7 +17928,7 @@
 			<key>parent</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1120</integer>
+				<integer>1119</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -18042,7 +18042,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1119</integer>
+				<integer>444</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -18054,21 +18054,12 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>106</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
 				<integer>111</integer>
 			</dict>
 			<key>children</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1121</integer>
+				<integer>1120</integer>
 			</dict>
 			<key>contentType</key>
 			<integer>0</integer>
@@ -18140,11 +18131,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1123</integer>
+					<integer>1122</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1124</integer>
+					<integer>1123</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -18152,11 +18143,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1125</integer>
+					<integer>1124</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1131</integer>
+					<integer>1130</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18219,7 +18210,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1126</integer>
+					<integer>1125</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18233,11 +18224,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1127</integer>
+					<integer>1126</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1129</integer>
+					<integer>1128</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18266,7 +18257,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1128</integer>
+					<integer>1127</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18296,7 +18287,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1130</integer>
+					<integer>1129</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18318,7 +18309,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1132</integer>
+					<integer>1131</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18332,11 +18323,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1133</integer>
+					<integer>1132</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1135</integer>
+					<integer>1134</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18365,7 +18356,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1134</integer>
+					<integer>1133</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18395,7 +18386,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1136</integer>
+					<integer>1135</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18417,7 +18408,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1138</integer>
+					<integer>1137</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18438,7 +18429,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1139</integer>
+					<integer>1138</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18467,7 +18458,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1140</integer>
+					<integer>1139</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -18475,7 +18466,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1156</integer>
+					<integer>1154</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18489,7 +18480,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1141</integer>
+					<integer>1140</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18538,15 +18529,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1142</integer>
+					<integer>1141</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1149</integer>
+					<integer>1148</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1153</integer>
+					<integer>1072</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -18558,7 +18549,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1154</integer>
+					<integer>1152</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18581,7 +18572,7 @@
 			<key>IdentifierPath</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1143</integer>
+				<integer>1142</integer>
 			</dict>
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
@@ -18599,6 +18590,10 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>1143</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>1144</integer>
 				</dict>
 				<dict>
@@ -18608,10 +18603,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>1146</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>1147</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18660,7 +18651,7 @@
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1148</integer>
+				<integer>1147</integer>
 			</dict>
 		</dict>
 		<string>BlockPlayground</string>
@@ -18693,11 +18684,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1150</integer>
+					<integer>1149</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1151</integer>
+					<integer>1150</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -18705,14 +18696,13 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1152</integer>
+					<integer>1151</integer>
 				</dict>
 			</array>
 		</dict>
-		<real>332558580.24904501</real>
-		<string>{2371, 1614}</string>
-		<string>{2415, 0}</string>
-		<string>-initWithRequest:</string>
+		<real>332558750.41954499</real>
+		<string>{0, 887}</string>
+		<string>{316, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18727,10 +18717,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>1155</integer>
+				<integer>1153</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIView-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18741,7 +18731,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1157</integer>
+					<integer>1155</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18763,7 +18753,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1159</integer>
+					<integer>1157</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18777,11 +18767,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1160</integer>
+					<integer>1158</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1162</integer>
+					<integer>1160</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18810,7 +18800,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1161</integer>
+					<integer>1159</integer>
 				</dict>
 			</array>
 		</dict>
@@ -18840,7 +18830,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>1163</integer>
+					<integer>1161</integer>
 				</dict>
 			</array>
 		</dict>
