@@ -7,78 +7,89 @@
 
 #import "UIView-BKAdditions.h"
 #import "NSObject-BKAdditions.h"
+#import "NSString-BKAdditions.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
-
-@interface BKDrawRectBlockView : UIView
-
-@property (nonatomic, copy) BKRectBlock internalDrawRectBlock;
-
-- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
-
-@end
-
-
-@implementation BKDrawRectBlockView
-
-@synthesize internalDrawRectBlock;
-
-- (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
-{
-    if ((self = [super initWithFrame:CGRectZero])) {
-        internalDrawRectBlock = [aDrawRectBlock copy];
-    }
-    return self;
-}
-
-- (void)dealloc;
-{
-    [internalDrawRectBlock release];
-    internalDrawRectBlock = nil;
-    
-    [super dealloc];
-}
-
-- (void)drawRect:(CGRect)rect;
-{
-    if (self.internalDrawRectBlock) {
-        self.internalDrawRectBlock(rect);
-    }
-}
-
-- (void)setInternalDrawRectBlock:(BKRectBlock)newInternalDrawRectBlock;
-{
-    if (newInternalDrawRectBlock != internalDrawRectBlock) {
-        [internalDrawRectBlock autorelease];
-        internalDrawRectBlock = [newInternalDrawRectBlock copy];
-        
-        [self setNeedsDisplay];
-    }
-}
-
+@interface UIView (BKAdditionsPrivate)
++ (Class)_createDrawRectBlockViewSubclassForClass:(Class)class;
 @end
 
 
 @implementation UIView (BKAdditions)
 
+@dynamic drawRectBlock;
+
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 {
-    BKDrawRectBlockView *drawRectBlockView = [[BKDrawRectBlockView alloc] initWithDrawRectBlock:aDrawRectBlock];
+    Class drawRectSubclass = [[self class] _createDrawRectBlockViewSubclassForClass:[self class]];
+    
+    id drawRectBlockView = [[drawRectSubclass alloc] init];
+    [drawRectBlockView setDrawRectBlock:aDrawRectBlock];
+    
     return drawRectBlockView;
 }
 
-- (void)setDrawRectBlock:(BKRectBlock)newDrawRectBlock;
-{
-    if ([self isKindOfClass:[BKDrawRectBlockView class]] && [self respondsToSelector:@selector(setInternalDrawRectBlock:)]) {
-        [(BKDrawRectBlockView *)self setInternalDrawRectBlock:newDrawRectBlock];
+#pragma mark - BKAdditionsPrivate
+
+static void BKDrawRectBlockViewDrawRect(id self, SEL _cmd, CGRect dirtyRect) {
+    BKRectBlock drawRectBlock = [self drawRectBlock];
+    if (drawRectBlock) {
+        drawRectBlock(dirtyRect);
     }
 }
 
-- (BKRectBlock)drawRectBlock;
+
+static void BKDrawRectBlockViewDealloc(id self, SEL _cmd) {
+    [self setDrawRectBlock:nil];
+    
+    struct objc_super superStruct = { self, [self superclass] };
+    objc_msgSendSuper(&superStruct, @selector(dealloc));
+}
+
+
+static void BKDrawRectBlockViewSetDrawRectBlock(id self, SEL _cmd, BKRectBlock drawRectBlock) {
+    objc_setAssociatedObject(self, [self associationKeyForPropertyName:[NSStringFromSelector(_cmd) getterMethodString]], drawRectBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self setNeedsDisplay];
+}
+
+static BKRectBlock BKDrawRectBlockViewDrawRectBlock(id self, SEL _cmd) {
+    return objc_getAssociatedObject(self, [self associationKeyForPropertyName:NSStringFromSelector(_cmd)]);
+}
+
++ (Class)_createDrawRectBlockViewSubclassForClass:(Class)class;
 {
-    if ([self isKindOfClass:[BKDrawRectBlockView class]] && [self respondsToSelector:@selector(internalDrawRectBlock)]) {
-        return [(BKDrawRectBlockView *)self internalDrawRectBlock];
+    NSString *subclassName = [@"BKDrawRect_" stringByAppendingString:NSStringFromClass(class)];
+    Class drawRectSubclass = objc_allocateClassPair(class, [subclassName UTF8String], 0);
+    
+    SEL drawRectSelector = @selector(drawRect:);
+    Method drawRectMethod = class_getInstanceMethod(drawRectSubclass, drawRectSelector);
+    if (!class_addMethod(drawRectSubclass, drawRectSelector, (IMP)BKDrawRectBlockViewDrawRect, method_getTypeEncoding(drawRectMethod))) {
+        class_replaceMethod(drawRectSubclass, drawRectSelector, (IMP)BKDrawRectBlockViewDrawRect, method_getTypeEncoding(drawRectMethod));
     }
-    return nil;
+    
+    SEL deallocSelector = @selector(dealloc);
+    Method deallocMethod = class_getInstanceMethod(drawRectSubclass, deallocSelector);
+    if (!class_addMethod(drawRectSubclass, deallocSelector, (IMP)BKDrawRectBlockViewDealloc, method_getTypeEncoding(deallocMethod))) {
+        class_replaceMethod(drawRectSubclass, deallocSelector, (IMP)BKDrawRectBlockViewDealloc, method_getTypeEncoding(deallocMethod));
+    }
+    
+    NSString *drawRectBlockGetterTypeEncoding = [NSString stringWithFormat: @"%s%s%s", @encode(void), @encode(id), @encode(SEL)];
+    SEL drawRectBlockGetterSelector = @selector(drawRectBlock);
+    
+    if (!class_addMethod(drawRectSubclass, drawRectBlockGetterSelector, (IMP)BKDrawRectBlockViewDrawRectBlock, [drawRectBlockGetterTypeEncoding UTF8String])) {
+        class_replaceMethod(drawRectSubclass, drawRectBlockGetterSelector, (IMP)BKDrawRectBlockViewDrawRectBlock, [drawRectBlockGetterTypeEncoding UTF8String]);
+    }
+    
+    NSString *drawRectBlockSetterTypeEncoding = [NSString stringWithFormat: @"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(BKRectBlock)];
+    SEL drawRectBlockSetterSelector = @selector(setDrawRectBlock:);
+    
+    if (!class_addMethod(drawRectSubclass, drawRectBlockSetterSelector, (IMP)BKDrawRectBlockViewSetDrawRectBlock, [drawRectBlockSetterTypeEncoding UTF8String])) {
+        class_replaceMethod(drawRectSubclass, drawRectBlockGetterSelector, (IMP)BKDrawRectBlockViewSetDrawRectBlock, [drawRectBlockSetterTypeEncoding UTF8String]);
+    }
+    
+    objc_registerClassPair(drawRectSubclass);
+    return drawRectSubclass;
 }
 
 @end
