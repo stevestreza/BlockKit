@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */; };
+		6A259FBE13D28BC20034CA1D /* NSEnumerator-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A259FBD13D28BC20034CA1D /* NSEnumerator-BKAdditions.m */; };
 		F13EAA7F13D25084008C9BD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA7E13D25084008C9BD2 /* UIKit.framework */; };
 		F13EAA8113D25084008C9BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8013D25084008C9BD2 /* Foundation.framework */; };
 		F13EAA8313D25084008C9BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8213D25084008C9BD2 /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		6A259F9913D273DB0034CA1D /* NSDate-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-BKAdditions.h"; sourceTree = "<group>"; };
 		6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-BKAdditions.m"; sourceTree = "<group>"; };
+		6A259FBC13D28BC20034CA1D /* NSEnumerator-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEnumerator-BKAdditions.h"; sourceTree = "<group>"; };
+		6A259FBD13D28BC20034CA1D /* NSEnumerator-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEnumerator-BKAdditions.m"; sourceTree = "<group>"; };
 		F13EAA7A13D25084008C9BD2 /* BlockPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13EAA7E13D25084008C9BD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F13EAA8013D25084008C9BD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +196,8 @@
 				F13EAAB713D251D2008C9BD2 /* UIImage-BKAdditions.m */,
 				F13EAAB813D251D2008C9BD2 /* UIView-BKAdditions.h */,
 				F13EAAB913D251D2008C9BD2 /* UIView-BKAdditions.m */,
+				6A259FBC13D28BC20034CA1D /* NSEnumerator-BKAdditions.h */,
+				6A259FBD13D28BC20034CA1D /* NSEnumerator-BKAdditions.m */,
 			);
 			name = BlockKit;
 			path = ../../Source;
@@ -280,6 +285,7 @@
 				F13EAACE13D25DD1008C9BD2 /* NSString-BKAdditions.m in Sources */,
 				F13EAAD113D282E9008C9BD2 /* BKTestView.m in Sources */,
 				6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */,
+				6A259FBE13D28BC20034CA1D /* NSEnumerator-BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
