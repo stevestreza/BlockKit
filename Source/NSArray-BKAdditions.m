@@ -10,6 +10,41 @@
 
 @implementation NSArray (BKAdditions)
 
+#pragma mark Static Methods
+
++ (void)iterateFrom:(NSInteger)begin upTo:(NSInteger)end usingBlock:(void (^)(NSInteger value))block;
+{
+    if (begin > end || !block) {
+        return;
+    }
+    
+    for (NSInteger index = begin; index <= end; index++) {
+        block(index);
+    }
+}
+
++ (void)iterateFrom:(NSInteger)begin downTo:(NSInteger)end usingBlock:(void (^)(NSInteger value))block;
+{
+    if (end > begin || !block) {
+        return;
+    }
+    
+    for (NSInteger index = begin; index >= end; index--) {
+        block(index);
+    }
+}
+
++ (void)iterateTimes:(NSUInteger)times usingBlock:(void (^)(NSUInteger value))block;
+{
+    if (times == 0 || !block) {
+        return;
+    }
+    
+    for (NSUInteger index = 0; index < times; index++) {
+        block(index);
+    }
+}
+
 #pragma mark Public Methods
 
 - (NSArray *)objectsPassingTest:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
@@ -24,7 +59,7 @@
     }];
 }
 
-- (NSArray *)map:(id (^)(id obj, NSUInteger idx))block;
+- (NSArray *)arrayWithMap:(id (^)(id obj, NSUInteger idx))block;
 {
     NSMutableArray *newArray = [NSMutableArray array];
     

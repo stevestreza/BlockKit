@@ -8,13 +8,18 @@
 
 #import "NSURLConnection-BKAdditions.h"
 
+
+// Private Classes
 @interface BKURLConnectionDelegateWrapper : NSObject
+
 @property (nonatomic, copy) BKConnectionCompletionBlock completionBlock;
 @property (nonatomic, retain) NSURLResponse *urlResponse;
 @property (nonatomic, retain) NSMutableData *responseData;
 
 - (id)initWithCompletionBlock:(BKConnectionCompletionBlock)aCompletionBlock;
+
 @end
+
 
 @implementation BKURLConnectionDelegateWrapper
 
@@ -22,12 +27,17 @@
 @synthesize urlResponse;
 @synthesize responseData;
 
+#pragma mark Initialization
+
 - (id)initWithCompletionBlock:(BKConnectionCompletionBlock)aCompletionBlock;
 {
-    if ((self = [super init])) {
-        completionBlock = [aCompletionBlock copy];
-        responseData = [[NSMutableData alloc] init];
+    if (!(self = [super init])) {
+        return nil;
     }
+    
+    completionBlock = [aCompletionBlock copy];
+    responseData = [[NSMutableData alloc] init];
+
     return self;
 }
 
@@ -43,7 +53,7 @@
     [super dealloc];
 }
 
-#pragma mark - NSURLConnection Delegate
+#pragma mark NSURLConnectionDelegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
 {
@@ -57,19 +67,20 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 {
-    if (self.completionBlock) {
+    if (completionBlock) {
         self.completionBlock([NSData dataWithData:self.responseData], self.urlResponse, error);
     }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
-    if (self.completionBlock) {
+    if (completionBlock) {
         self.completionBlock([NSData dataWithData:self.responseData], self.urlResponse, nil);
     }
 }
 
 @end
+
 
 @implementation NSURLConnection (BKAdditions)
 
