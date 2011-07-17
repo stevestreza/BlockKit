@@ -34,6 +34,8 @@
 		F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */; };
 		F13EAACE13D25DD1008C9BD2 /* NSString-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAACD13D25DD1008C9BD2 /* NSString-BKAdditions.m */; };
 		F13EAAD113D282E9008C9BD2 /* BKTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAD013D282E8008C9BD2 /* BKTestView.m */; };
+		F152E30C13D2939500726781 /* NSTimer-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F152E30B13D2939500726781 /* NSTimer-BKAdditions.m */; };
+		F152E31013D293DA00726781 /* BKVoidBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F152E30F13D293DA00726781 /* BKVoidBlockWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,10 @@
 		F13EAACD13D25DD1008C9BD2 /* NSString-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-BKAdditions.m"; sourceTree = "<group>"; };
 		F13EAACF13D282E7008C9BD2 /* BKTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTestView.h; sourceTree = "<group>"; };
 		F13EAAD013D282E8008C9BD2 /* BKTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTestView.m; sourceTree = "<group>"; };
+		F152E30A13D2939500726781 /* NSTimer-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer-BKAdditions.h"; sourceTree = "<group>"; };
+		F152E30B13D2939500726781 /* NSTimer-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer-BKAdditions.m"; sourceTree = "<group>"; };
+		F152E30E13D293DA00726781 /* BKVoidBlockWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKVoidBlockWrapper.h; sourceTree = "<group>"; };
+		F152E30F13D293DA00726781 /* BKVoidBlockWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKVoidBlockWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,8 @@
 				F13EAAA513D251D2008C9BD2 /* BKReachability.h */,
 				F13EAAA613D251D2008C9BD2 /* BKReachability.m */,
 				F13EAAA713D251D2008C9BD2 /* BKTypes.h */,
+				F152E30E13D293DA00726781 /* BKVoidBlockWrapper.h */,
+				F152E30F13D293DA00726781 /* BKVoidBlockWrapper.m */,
 				F13EAAA813D251D2008C9BD2 /* CATransaction-BKAdditions.h */,
 				F13EAAA913D251D2008C9BD2 /* CATransaction-BKAdditions.m */,
 				F13EAAAA13D251D2008C9BD2 /* NSArray-BKAdditions.h */,
@@ -184,6 +192,8 @@
 				F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */,
 				F13EAACC13D25DD0008C9BD2 /* NSString-BKAdditions.h */,
 				F13EAACD13D25DD1008C9BD2 /* NSString-BKAdditions.m */,
+				F152E30A13D2939500726781 /* NSTimer-BKAdditions.h */,
+				F152E30B13D2939500726781 /* NSTimer-BKAdditions.m */,
 				F13EAAC913D25553008C9BD2 /* NSURLConnection-BKAdditions.h */,
 				F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */,
 				F13EAAB013D251D2008C9BD2 /* UIActionSheet-BKAdditions.h */,
@@ -286,6 +296,8 @@
 				F13EAAD113D282E9008C9BD2 /* BKTestView.m in Sources */,
 				6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */,
 				6A259FBE13D28BC20034CA1D /* NSEnumerator-BKAdditions.m in Sources */,
+				F152E30C13D2939500726781 /* NSTimer-BKAdditions.m in Sources */,
+				F152E31013D293DA00726781 /* BKVoidBlockWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
