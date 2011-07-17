@@ -27,9 +27,9 @@
 {
     [super viewDidLoad];
     
-    __block BlockPlaygroundViewController *safeself = self;
+    BKBlockSafe(self);
     
-    BKTestView *blockView = [[BKTestView alloc] initWithDrawRectBlock:^(CGRect dirtyRect) {
+    BKTestView *blockView = [[BKTestView alloc] initWithFrame:self.view.frame drawRectBlock:^(CGRect dirtyRect) {
         NSLog(@"Some draw rect");
     }];
     
@@ -38,10 +38,7 @@
     
     [blockView release];
     
-    UIButton *tempButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [tempButton setTitle:@"Change Color" forState:UIControlStateNormal];
-    
-    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake(50.0f, 50.0f, 100.0f, 100.0f)];
+    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 100.0f, 100.0f)];
     greenView.backgroundColor = [UIColor greenColor];
     
     self.view.drawRectBlock = ^(CGRect dirtyRect) {
@@ -50,16 +47,11 @@
     };
     
     self.view.layoutSubviewsBlock = ^{
-        greenView.frame = CGRectMake(0.0f, 0.0f, 10.0f, 10.0f);
+        BKCenterViewInSuperviewBlock(greenView);
     };
     
-    CGFloat buttonWidth = 200.0f;
-    tempButton.frame = CGRectMake(floorf((CGRectGetWidth(self.view.frame) - buttonWidth) / 2), 50, buttonWidth, 44);
-    
-    [self.view addSubview:tempButton];
     [self.view addSubview:greenView];
     
-    [blockView performSelector:@selector(testLog) withObject:nil afterDelay:2.0];
     
     /* NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com/"]];
      NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request];

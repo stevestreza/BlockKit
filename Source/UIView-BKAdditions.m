@@ -11,6 +11,10 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+
+BKViewBlock BKCenterViewInSuperviewBlock = nil;
+
+
 @interface UIView (BKAdditionsPrivate)
 + (Class)_createDrawRectBlockViewSubclassForClass:(Class)class;
 @end
@@ -32,6 +36,11 @@
         Method layoutSubviewsMethod = class_getInstanceMethod(self, @selector(layoutSubviews));
         Method bkLayoutSubviewsMethod = class_getInstanceMethod(self, @selector(bk_layoutSubviews));
         method_exchangeImplementations(bkLayoutSubviewsMethod, layoutSubviewsMethod);
+        
+        BKCenterViewInSuperviewBlock = [^(UIView *view){
+            UIView *superView = view.superview;
+            view.frame = CGRectMake(floorf((CGRectGetWidth(superView.frame) - CGRectGetWidth(view.frame)) / 2), floorf((CGRectGetHeight(superView.frame) - CGRectGetHeight(view.frame)) / 2), CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
+        } copy];
     });
 }
 

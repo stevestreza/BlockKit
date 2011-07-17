@@ -11,6 +11,8 @@
 
 @interface UIView (BKAdditions)
 
+extern BKViewBlock BKCenterViewInSuperviewBlock;
+
 // Block based -drawRect:
 // WARNING: One of these initializers must be used to use drawRectBlock.
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
