@@ -11,7 +11,6 @@
 
 @interface NSString (BKAdditions)
 
-- (void)enumerateLinesUsingBlock:(BKStringBlock)lineBlock;
-- (void)enumerateCharactersUsingBlock:(BKCharBlock)characterBlock;
+- (void)enumerateCharactersUsingBlock:(BKUniCharBlock)characterBlock;
 
 @end

@@ -14,5 +14,5 @@ typedef id (^BKCacheBlock)();
 typedef void (^BKIndexPathBlock)(NSIndexPath *indexPath);
 typedef void (^BKButtonIndexBlock)(NSInteger buttonIndex);
 typedef void (^BKStringBlock)(NSString *string);
-typedef void (^BKCharBlock)(char character);
+typedef void (^BKUniCharBlock)(unichar character);
 typedef void (^BKConnectionCompletionBlock)(NSData *responseData, NSURLResponse *urlResponse, NSError *error);

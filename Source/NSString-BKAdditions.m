@@ -10,17 +10,9 @@
 
 @implementation NSString (BKAdditions)
 
-- (void)enumerateLinesUsingBlock:(BKStringBlock)lineBlock;
+- (void)enumerateCharactersUsingBlock:(BKUniCharBlock)characterBlock;
 {
-    NSArray *lines = [self componentsSeparatedByString:@"\n"];
-    for (NSString *currLine in lines) {
-        lineBlock(currLine);
-    }
-}
-
-- (void)enumerateCharactersUsingBlock:(BKCharBlock)characterBlock;
-{
-    for (NSInteger currentCharacterIndex = 0; currentCharacterIndex < self.length; currentCharacterIndex++) {
+    for (NSUInteger currentCharacterIndex = 0; currentCharacterIndex < self.length; currentCharacterIndex++) {
         char currentCharacter = [self characterAtIndex:currentCharacterIndex];
         characterBlock(currentCharacter);
     }
