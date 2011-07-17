@@ -9,6 +9,7 @@
 #import "BlockPlaygroundAppDelegate.h"
 #import "BlockPlaygroundViewController.h"
 #import "NSArray-BKAdditions.h"
+#import "NSDate-BKAdditions.h"
 
 
 @implementation BlockPlaygroundAppDelegate
@@ -32,6 +33,26 @@
     NSLog(@"iterate 5 times");
     [NSArray iterateTimes:5 usingBlock:^(NSUInteger value) {
         NSLog(@"num: %d", value);
+    }];
+    
+    NSLog(@"iterate 1 day");
+    [[NSDate date] enumerateByDayToDate:[NSDate date] step:1 usingBlock:^(NSDate *date) {
+        NSLog(@"day: %@", date);
+    }];
+    
+    NSLog(@"iterate 7 days");
+    [[NSDate date] enumerateByDayToDate:[[NSDate date] dateByAddingTimeInterval:(60.0 * 60.0 * 24.0 * 7.0)] step:1 usingBlock:^(NSDate *date) {
+        NSLog(@"day: %@", date);
+    }];
+    
+    NSLog(@"iterate 30 days by step 2");
+    [[NSDate date] enumerateByDayToDate:[[NSDate date] dateByAddingTimeInterval:(60.0 * 60.0 * 24.0 * 30.0)] step:2 usingBlock:^(NSDate *date) {
+        NSLog(@"day: %@", date);
+    }];
+    
+    NSLog(@"iterate 10 days backwards");
+    [[[NSDate date] dateByAddingTimeInterval:(60.0 * 60.0 * 24.0 * 10.0)] enumerateByDayToDate:[NSDate date] step:-1 usingBlock:^(NSDate *date) {
+        NSLog(@"day: %@", date);
     }];
     
     // Override point for customization after application launch.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */; };
 		F13EAA7F13D25084008C9BD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA7E13D25084008C9BD2 /* UIKit.framework */; };
 		F13EAA8113D25084008C9BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8013D25084008C9BD2 /* Foundation.framework */; };
 		F13EAA8313D25084008C9BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8213D25084008C9BD2 /* CoreGraphics.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A259F9913D273DB0034CA1D /* NSDate-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-BKAdditions.h"; sourceTree = "<group>"; };
+		6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-BKAdditions.m"; sourceTree = "<group>"; };
 		F13EAA7A13D25084008C9BD2 /* BlockPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13EAA7E13D25084008C9BD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F13EAA8013D25084008C9BD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +168,8 @@
 				F13EAAA913D251D2008C9BD2 /* CATransaction-BKAdditions.m */,
 				F13EAAAA13D251D2008C9BD2 /* NSArray-BKAdditions.h */,
 				F13EAAAB13D251D2008C9BD2 /* NSArray-BKAdditions.m */,
+				6A259F9913D273DB0034CA1D /* NSDate-BKAdditions.h */,
+				6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */,
 				F13EAAAC13D251D2008C9BD2 /* NSCache-BKAdditions.h */,
 				F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */,
 				F13EAAAE13D251D2008C9BD2 /* NSObject-BKAdditions.h */,
@@ -268,6 +273,7 @@
 				F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */,
 				F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */,
 				F13EAACE13D25DD1008C9BD2 /* NSString-BKAdditions.m in Sources */,
+				6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +387,7 @@
 				F13EAA9B13D25085008C9BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
