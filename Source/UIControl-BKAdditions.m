@@ -6,61 +6,12 @@
 //
 
 #import "UIControl-BKAdditions.h"
+#import "BKVoidBlockWrapper.h"
 #import "NSObject-BKAdditions.h"
 
 
-// Private Methods
-@interface BKVoidBlockWrapper : NSObject
-
-@property (nonatomic, copy) BKVoidBlock block;
-@property (nonatomic, retain) id userInfo;
-
-- (id)initWithBlock:(BKVoidBlock)aBlock userInfo:(id)someUserInfo;
-- (void)performBlock;
-
-@end
-
-
-@implementation BKVoidBlockWrapper
-
-@synthesize block;
-@synthesize userInfo;
-
-#pragma mark Initialization
-
-- (id)initWithBlock:(BKVoidBlock)aBlock userInfo:(id)someUserInfo;
-{
-    if (!(self = [super init])) {
-        return nil;
-    }
-    
-    block = [aBlock copy];
-    userInfo = [someUserInfo retain];
-
-    return self;
-}
-
-- (void)dealloc;
-{
-    [block release];
-    block = nil;
-    [userInfo release];
-    userInfo = nil;
-    
-    [super dealloc];
-}
-
-- (void)performBlock;
-{
-    if (self.block) {
-        self.block();
-    }
-}
-
-@end
-
-
 @implementation UIControl (BKAdditions)
+
 
 + (void)load;
 {
