@@ -10,6 +10,7 @@
 #import "UIView-BKAdditions.h"
 #import "UIControl-BKAdditions.h"
 #import "NSURLConnection-BKAdditions.h"
+#import "NSString-BKAdditions.h"
 
 @implementation BlockPlaygroundViewController
 
@@ -53,17 +54,6 @@
     tempButton.frame = CGRectMake(floorf((CGRectGetWidth(self.view.frame) - buttonWidth) / 2), 50, buttonWidth, 44);
     
     [self.view addSubview:tempButton];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com/"]];
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request completionBlock:^(NSData *responseData, NSURLResponse *urlResponse, NSError *error) {
-        if (!error) {
-            NSLog(@"Response String: %@", [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
-        } else {
-            NSLog(@"Response Error: %@", error);
-        }
-    }];
-    [connection start];
-    [connection release];
 }
 
 - (void)viewDidUnload
