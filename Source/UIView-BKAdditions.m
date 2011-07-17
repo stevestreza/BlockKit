@@ -11,8 +11,11 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+
 @interface UIView (BKAdditionsPrivate)
+
 + (Class)_createDrawRectBlockViewSubclassForClass:(Class)class;
+
 @end
 
 
@@ -30,9 +33,10 @@
     return drawRectBlockView;
 }
 
-#pragma mark - BKAdditionsPrivate
+#pragma mark BKAdditionsPrivate
 
-static void BKDrawRectBlockViewBKDrawRect(id self, SEL _cmd, CGRect dirtyRect) {
+static void BKDrawRectBlockViewBKDrawRect(id self, SEL _cmd, CGRect dirtyRect)
+{
     BOOL hasDrawn = NO;
     if ([self respondsToSelector:@selector(drawRectBlock)]) {
         BKRectBlock drawRectBlock = [self drawRectBlock];
@@ -48,7 +52,8 @@ static void BKDrawRectBlockViewBKDrawRect(id self, SEL _cmd, CGRect dirtyRect) {
 }
 
 
-static void BKDrawRectBlockViewBKDealloc(id self, SEL _cmd) {
+static void BKDrawRectBlockViewBKDealloc(id self, SEL _cmd)
+{
     if ([self respondsToSelector:@selector(setDrawRectBlock:)]) {
         [self setDrawRectBlock:nil];
     }
@@ -58,13 +63,14 @@ static void BKDrawRectBlockViewBKDealloc(id self, SEL _cmd) {
     }
 }
 
-
-static void BKDrawRectBlockViewSetDrawRectBlock(id self, SEL _cmd, BKRectBlock drawRectBlock) {
+static void BKDrawRectBlockViewSetDrawRectBlock(id self, SEL _cmd, BKRectBlock drawRectBlock)
+{
     objc_setAssociatedObject(self, [self associationKeyForPropertyName:[NSStringFromSelector(_cmd) getterMethodString]], drawRectBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self setNeedsDisplay];
 }
 
-static BKRectBlock BKDrawRectBlockViewDrawRectBlock(id self, SEL _cmd) {
+static BKRectBlock BKDrawRectBlockViewDrawRectBlock(id self, SEL _cmd)
+{
     return objc_getAssociatedObject(self, [self associationKeyForPropertyName:NSStringFromSelector(_cmd)]);
 }
 

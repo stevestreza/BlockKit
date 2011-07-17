@@ -169,6 +169,7 @@
 		F13EAA9E13D251D2008C9BD2 /* BlockKit */ = {
 			isa = PBXGroup;
 			children = (
+				F13EAAA713D251D2008C9BD2 /* BKTypes.h */,
 				F13EAA9F13D251D2008C9BD2 /* BKAnimationDelegate.h */,
 				F13EAAA013D251D2008C9BD2 /* BKAnimationDelegate.m */,
 				F13EAAA113D251D2008C9BD2 /* BKBlockTableViewDataSource.h */,
@@ -177,7 +178,6 @@
 				F13EAAA413D251D2008C9BD2 /* BKCoreGraphics.m */,
 				F13EAAA513D251D2008C9BD2 /* BKReachability.h */,
 				F13EAAA613D251D2008C9BD2 /* BKReachability.m */,
-				F13EAAA713D251D2008C9BD2 /* BKTypes.h */,
 				F152E30E13D293DA00726781 /* BKVoidBlockWrapper.h */,
 				F152E30F13D293DA00726781 /* BKVoidBlockWrapper.m */,
 				F13EAAA813D251D2008C9BD2 /* CATransaction-BKAdditions.h */,

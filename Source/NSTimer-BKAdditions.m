@@ -1,13 +1,13 @@
 //
 //  NSTimer-BKAdditions.m
-//  BlockPlayground
+//  BlockKit
 //
 //  Created by Nick Paulson on 7/16/11.
-//  Copyright 2011 Linebreak. All rights reserved.
 //
 
 #import "NSTimer-BKAdditions.h"
 #import "BKVoidBlockWrapper.h"
+
 
 @implementation NSTimer (BKAdditions)
 

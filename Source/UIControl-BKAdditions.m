@@ -12,7 +12,6 @@
 
 @implementation UIControl (BKAdditions)
 
-
 + (void)load;
 {
     static dispatch_once_t onceToken;

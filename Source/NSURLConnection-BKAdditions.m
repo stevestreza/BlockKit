@@ -1,9 +1,8 @@
 //
 //  NSURLConnection-BKAdditions.m
-//  BlockPlayground
+//  BlockKit
 //
 //  Created by Nick Paulson on 7/16/11.
-//  Copyright 2011 Linebreak. All rights reserved.
 //
 
 #import "NSURLConnection-BKAdditions.h"
@@ -84,9 +83,13 @@
 
 @end
 
+
 @interface NSURLConnection (BKAdditionsPrivate)
+
 @property (nonatomic, retain) BKURLConnectionDelegateWrapper *delegateWrapper;
+
 @end
+
 
 @implementation NSURLConnection (BKAdditions)
 
