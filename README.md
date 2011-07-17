@@ -1,0 +1,1 @@
+**BlockKit** is a framework that block-ifies pieces of Foundation and UIKit that are in desperate need.
