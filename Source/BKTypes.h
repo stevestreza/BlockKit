@@ -13,4 +13,5 @@ typedef void (^BKRectBlock)(CGRect rect);
 typedef id (^BKCacheBlock)();
 typedef void (^BKIndexPathBlock)(NSIndexPath *indexPath);
 typedef void (^BKButtonIndexBlock)(NSInteger buttonIndex);
+typedef void (^BKStringBlock)(NSString *string);
 typedef void (^BKConnectionCompletionBlock)(NSData *responseData, NSURLResponse *urlResponse, NSError *error);
