@@ -30,8 +30,7 @@
     __block BlockPlaygroundViewController *safeself = self;
     
     BKTestView *blockView = [[BKTestView alloc] initWithDrawRectBlock:^(CGRect dirtyRect) {
-        [[UIColor redColor] set];
-        [[UIBezierPath bezierPathWithRect:safeself.view.bounds] fill];
+        NSLog(@"Some draw rect");
     }];
     
     blockView.frame = self.view.frame;
@@ -50,6 +49,8 @@
         };
         isRed = !isRed;
     }];
+    
+    self.view.drawRectBlock = nil;
     
     CGFloat buttonWidth = 200.0f;
     tempButton.frame = CGRectMake(floorf((CGRectGetWidth(self.view.frame) - buttonWidth) / 2), 50, buttonWidth, 44);

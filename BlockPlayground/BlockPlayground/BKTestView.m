@@ -10,6 +10,12 @@
 
 @implementation BKTestView
 
+- (void)drawRect:(CGRect)rect;
+{
+    [[UIColor yellowColor] set];
+    [[UIBezierPath bezierPathWithRect:self.bounds] fill];
+}
+
 - (void)testLog;
 {
     NSLog(@"It works!");
