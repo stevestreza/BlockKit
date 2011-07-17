@@ -31,6 +31,7 @@
 		F13EAAC813D25219008C9BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAAC713D25219008C9BD2 /* QuartzCore.framework */; };
 		F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */; };
 		F13EAACE13D25DD1008C9BD2 /* NSString-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAACD13D25DD1008C9BD2 /* NSString-BKAdditions.m */; };
+		F13EAAD113D282E9008C9BD2 /* BKTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F13EAAD013D282E8008C9BD2 /* BKTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,8 @@
 		F13EAACA13D25554008C9BD2 /* NSURLConnection-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection-BKAdditions.m"; sourceTree = "<group>"; };
 		F13EAACC13D25DD0008C9BD2 /* NSString-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-BKAdditions.h"; sourceTree = "<group>"; };
 		F13EAACD13D25DD1008C9BD2 /* NSString-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-BKAdditions.m"; sourceTree = "<group>"; };
+		F13EAACF13D282E7008C9BD2 /* BKTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTestView.h; sourceTree = "<group>"; };
+		F13EAAD013D282E8008C9BD2 /* BKTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				F13EAA9013D25085008C9BD2 /* BlockPlaygroundViewController.h */,
 				F13EAA9213D25085008C9BD2 /* BlockPlaygroundViewController.m */,
 				F13EAA9413D25085008C9BD2 /* BlockPlaygroundViewController.xib */,
+				F13EAACF13D282E7008C9BD2 /* BKTestView.h */,
+				F13EAAD013D282E8008C9BD2 /* BKTestView.m */,
 				F13EAA9E13D251D2008C9BD2 /* BlockKit */,
 				F13EAA8513D25084008C9BD2 /* Supporting Files */,
 			);
@@ -268,6 +273,7 @@
 				F13EAAC613D251D2008C9BD2 /* UIView-BKAdditions.m in Sources */,
 				F13EAACB13D25555008C9BD2 /* NSURLConnection-BKAdditions.m in Sources */,
 				F13EAACE13D25DD1008C9BD2 /* NSString-BKAdditions.m in Sources */,
+				F13EAAD113D282E9008C9BD2 /* BKTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

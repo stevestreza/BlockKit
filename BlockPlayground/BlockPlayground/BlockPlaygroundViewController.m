@@ -7,6 +7,7 @@
 //
 
 #import "BlockPlaygroundViewController.h"
+#import "BKTestView.h"
 #import "UIView-BKAdditions.h"
 #import "UIControl-BKAdditions.h"
 #import "NSURLConnection-BKAdditions.h"
@@ -28,7 +29,7 @@
     
     __block BlockPlaygroundViewController *safeself = self;
     
-    UIView *blockView = [[UIView alloc] initWithDrawRectBlock:^(CGRect dirtyRect) {
+    BKTestView *blockView = [[BKTestView alloc] initWithDrawRectBlock:^(CGRect dirtyRect) {
         [[UIColor redColor] set];
         [[UIBezierPath bezierPathWithRect:safeself.view.bounds] fill];
     }];
@@ -55,7 +56,9 @@
     
     [self.view addSubview:tempButton];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com/"]];
+    [blockView performSelector:@selector(testLog) withObject:nil afterDelay:2.0];
+    
+    /* NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://google.com/"]];
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request];
     
     [connection startWithCompletionBlock:^(NSData *responseData, NSURLResponse *urlResponse, NSError *error) {
@@ -66,7 +69,7 @@
         }
     }];
 
-    [connection release];
+    [connection release]; */
 }
 
 - (void)viewDidUnload
