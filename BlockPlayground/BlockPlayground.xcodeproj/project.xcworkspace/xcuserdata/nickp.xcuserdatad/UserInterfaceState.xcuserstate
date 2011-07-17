@@ -1529,7 +1529,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332558750.42214602</real>
+		<real>332558803.66084403</real>
 		<string>{0, 480}</string>
 		<string>{473, 0}</string>
 		<string>@interface NSObject(BKAdditions)</string>
@@ -7096,7 +7096,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558750.41874999</real>
+		<real>332558803.65644002</real>
 		<string>{0, 480}</string>
 		<string>{473, 0}</string>
 		<dict>
@@ -7191,8 +7191,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558750.41854799</real>
-		<string>{0, 887}</string>
+		<real>332558785.79617298</real>
+		<string>{0, 830}</string>
 		<string>{316, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -7621,9 +7621,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558604.94537902</real>
-		<string>{2371, 1614}</string>
-		<string>{2415, 0}</string>
+		<real>332558803.656039</real>
+		<string>{2429, 1614}</string>
+		<string>{1977, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7669,8 +7669,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558650.41166598</real>
-		<string>{1190, 1487}</string>
+		<real>332558776.11476898</real>
+		<string>{1190, 1486}</string>
 		<string>{1897, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -8359,7 +8359,7 @@
 				<integer>601</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIView-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8377,7 +8377,7 @@
 				<integer>603</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundViewController.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIView-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8395,7 +8395,7 @@
 				<integer>605</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/BlockPlayground/BlockPlayground/BlockPlaygroundViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -17122,7 +17122,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>UIView-BKAdditions.m</string>
+		<string>NSURLConnection-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -17380,7 +17380,7 @@
 			</array>
 		</dict>
 		<string>BlockPlayground</string>
-		<string>UIView-BKAdditions.m</string>
+		<string>NSURLConnection-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18042,7 +18042,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>444</integer>
+				<integer>462</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -18700,9 +18700,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332558750.41954499</real>
-		<string>{0, 887}</string>
-		<string>{316, 0}</string>
+		<real>332558803.65799898</real>
+		<string>{2429, 1614}</string>
+		<string>{1977, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18720,7 +18720,7 @@
 				<integer>1153</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/nickp/Development/BlockKit/Source/UIView-BKAdditions.m</string>
+		<string>file://localhost/Users/nickp/Development/BlockKit/Source/NSURLConnection-BKAdditions.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BKTypes.h"
 
+
 @interface NSURLConnection (BKAdditions)
 
 - (id)initWithRequest:(NSURLRequest *)request;

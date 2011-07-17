@@ -7,8 +7,9 @@
 //
 
 #import "BlockPlaygroundAppDelegate.h"
-
 #import "BlockPlaygroundViewController.h"
+#import "NSArray-BKAdditions.h"
+
 
 @implementation BlockPlaygroundAppDelegate
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // some tests
+    NSLog(@"iterate from 5 to 10");
+    [NSArray iterateFrom:5 upTo:10 usingBlock:^(NSInteger value) {
+        NSLog(@"num: %d", value);
+    }];
+    
+    NSLog(@"iterate from 10 down to 5");
+    [NSArray iterateFrom:10 downTo:5 usingBlock:^(NSInteger value) {
+        NSLog(@"num: %d", value);
+    }];
+    
+    NSLog(@"iterate 5 times");
+    [NSArray iterateTimes:5 usingBlock:^(NSUInteger value) {
+        NSLog(@"num: %d", value);
+    }];
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[BlockPlaygroundViewController alloc] initWithNibName:@"BlockPlaygroundViewController" bundle:nil]; 
