@@ -11,10 +11,14 @@
 
 @interface UIView (BKAdditions)
 
+extern BKViewBlock BKCenterViewInSuperviewBlock;
+
 // Block based -drawRect:
-// WARNING: -initWithDrawRectBlock: must be used to initialize to use accessors
+// WARNING: One of these initializers must be used to use drawRectBlock.
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
+- (id)initWithFrame:(CGRect)frame drawRectBlock:(BKRectBlock)aDrawRectBlock;
 
 @property (nonatomic, copy) BKRectBlock drawRectBlock;
+@property (nonatomic, copy) BKVoidBlock layoutSubviewsBlock;
 
 @end

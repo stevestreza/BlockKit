@@ -18,6 +18,7 @@ typedef void (^BKStringBlock)(NSString *string);
 typedef void (^BKUniCharBlock)(unichar character);
 typedef void (^BKConnectionCompletionBlock)(NSData *responseData, NSURLResponse *urlResponse, NSError *error);
 typedef void (^BKDateBlock)(NSDate *date);
+typedef void (^BKViewBlock)(UIView *view);
 typedef void (^BKTaskBlock)(id obj, NSDictionary *change);
 
 
