@@ -41,7 +41,7 @@
     UIButton *tempButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [tempButton setTitle:@"Change Color" forState:UIControlStateNormal];
     
-    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    UIView *greenView = [[UIView alloc] initWithFrame:CGRectMake(50.0f, 50.0f, 100.0f, 100.0f)];
     greenView.backgroundColor = [UIColor greenColor];
     
     self.view.drawRectBlock = ^(CGRect dirtyRect) {
@@ -50,7 +50,7 @@
     };
     
     self.view.layoutSubviewsBlock = ^{
-        greenView.frame = CGRectMake(0, 0, 10, 10);
+        greenView.frame = CGRectMake(0.0f, 0.0f, 10.0f, 10.0f);
     };
     
     CGFloat buttonWidth = 200.0f;

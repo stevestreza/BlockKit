@@ -35,6 +35,13 @@
     });
 }
 
+- (id)initWithFrame:(CGRect)frame drawRectBlock:(BKRectBlock)aDrawRectBlock;
+{
+    id drawRectBlockView = [self initWithDrawRectBlock:aDrawRectBlock];
+    [drawRectBlockView setFrame:frame];
+    return drawRectBlockView;
+}
+
 - (id)initWithDrawRectBlock:(BKRectBlock)aDrawRectBlock;
 {
     Class drawRectSubclass = [[self class] _createDrawRectBlockViewSubclassForClass:[self class]];
