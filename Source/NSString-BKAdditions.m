@@ -18,4 +18,12 @@
     }
 }
 
+- (void)enumerateCharactersUsingBlock:(BKCharBlock)characterBlock;
+{
+    for (NSInteger currentCharacterIndex = 0; currentCharacterIndex < self.length; currentCharacterIndex++) {
+        char currentCharacter = [self characterAtIndex:currentCharacterIndex];
+        characterBlock(currentCharacter);
+    }
+}
+
 @end

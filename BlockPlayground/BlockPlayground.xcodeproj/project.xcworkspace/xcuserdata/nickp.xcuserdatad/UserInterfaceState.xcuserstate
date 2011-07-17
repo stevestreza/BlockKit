@@ -5364,9 +5364,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332555168.540537</real>
-		<string>{0, 571}</string>
-		<string>{457, 0}</string>
+		<real>332556543.56970698</real>
+		<string>{0, 616}</string>
+		<string>{475, 11}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5696,9 +5696,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332556394.42502898</real>
-		<string>{0, 429}</string>
-		<string>{414, 0}</string>
+		<real>332556611.97506398</real>
+		<string>{0, 738}</string>
+		<string>{432, 29}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5744,9 +5744,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332556300.41790599</real>
-		<string>{0, 303}</string>
-		<string>{238, 58}</string>
+		<real>332556608.19161397</real>
+		<string>{0, 370}</string>
+		<string>{296, 67}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -13400,10 +13400,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332556394.42631501</real>
-		<string>{0, 429}</string>
-		<string>{414, 0}</string>
-		<string>-enumerateLinesUsingBlock:</string>
+		<real>332556611.97692698</real>
+		<string>{0, 738}</string>
+		<string>{432, 29}</string>
+		<string>-enumerateCharactersUsingBlock:</string>
 		<dict>
 			<key>$class</key>
 			<dict>
