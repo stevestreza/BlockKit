@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E7E45B013D3AEDA00C569CE /* NSFileManager+BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E45AF13D3AEDA00C569CE /* NSFileManager+BKAdditions.m */; };
 		6A259F9B13D273DB0034CA1D /* NSDate-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */; };
 		6A259FBE13D28BC20034CA1D /* NSEnumerator-BKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A259FBD13D28BC20034CA1D /* NSEnumerator-BKAdditions.m */; };
 		F13EAA7F13D25084008C9BD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA7E13D25084008C9BD2 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E7E45AE13D3AEDA00C569CE /* NSFileManager+BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+BKAdditions.h"; sourceTree = "<group>"; };
+		1E7E45AF13D3AEDA00C569CE /* NSFileManager+BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+BKAdditions.m"; sourceTree = "<group>"; };
 		6A259F9913D273DB0034CA1D /* NSDate-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-BKAdditions.h"; sourceTree = "<group>"; };
 		6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-BKAdditions.m"; sourceTree = "<group>"; };
 		6A259FBC13D28BC20034CA1D /* NSEnumerator-BKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEnumerator-BKAdditions.h"; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				6A259F9A13D273DB0034CA1D /* NSDate-BKAdditions.m */,
 				F13EAAAC13D251D2008C9BD2 /* NSCache-BKAdditions.h */,
 				F13EAAAD13D251D2008C9BD2 /* NSCache-BKAdditions.m */,
+				1E7E45AE13D3AEDA00C569CE /* NSFileManager+BKAdditions.h */,
+				1E7E45AF13D3AEDA00C569CE /* NSFileManager+BKAdditions.m */,
 				F13EAAAE13D251D2008C9BD2 /* NSObject-BKAdditions.h */,
 				F13EAAAF13D251D2008C9BD2 /* NSObject-BKAdditions.m */,
 				F13EAACC13D25DD0008C9BD2 /* NSString-BKAdditions.h */,
@@ -298,6 +303,7 @@
 				6A259FBE13D28BC20034CA1D /* NSEnumerator-BKAdditions.m in Sources */,
 				F152E30C13D2939500726781 /* NSTimer-BKAdditions.m in Sources */,
 				F152E31013D293DA00726781 /* BKVoidBlockWrapper.m in Sources */,
+				1E7E45B013D3AEDA00C569CE /* NSFileManager+BKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

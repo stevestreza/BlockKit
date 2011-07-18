@@ -16,6 +16,7 @@ typedef void (^BKIndexPathBlock)(NSIndexPath *indexPath);
 typedef void (^BKButtonIndexBlock)(NSInteger buttonIndex);
 typedef void (^BKStringBlock)(NSString *string);
 typedef void (^BKUniCharBlock)(unichar character);
+typedef void (^BKDataReadBlock)(NSData *data, NSError *error);
 typedef void (^BKConnectionCompletionBlock)(NSData *responseData, NSURLResponse *urlResponse, NSError *error);
 typedef void (^BKDateBlock)(NSDate *date);
 typedef void (^BKViewBlock)(UIView *view);
