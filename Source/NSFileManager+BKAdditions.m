@@ -13,12 +13,12 @@
 
 @implementation NSFileManager (BKAdditions)
 
--(void)getContentsAtPath:(NSString *)path handler:(BKDataReadBlock)handler{
+-(void)getContentsAtPath:(NSString *)path withBlock:(BKDataReadBlock)dataReadBlock{
 	dispatch_queue_t queue = DISPATCH_GET_DEFAULT_GLOBAL_QUEUE();
 	dispatch_async(queue, ^{
 		int fd = open([path cStringUsingEncoding:NSUTF8StringEncoding], O_RDONLY | O_NONBLOCK);
 		if(fd < 1){
-			handler(nil, [NSError errorWithDomain:NSPOSIXErrorDomain code:fd userInfo:nil]);
+			dataReadBlock(nil, [NSError errorWithDomain:NSPOSIXErrorDomain code:fd userInfo:nil]);
 			return;
 		}
 		
@@ -42,7 +42,7 @@
 			void *buf = malloc((max+1) * sizeof(char));
 			int readLength = read(fd, buf, max);
 			if(readLength < 0){
- 				handler(nil, [NSError errorWithDomain:NSPOSIXErrorDomain code:readLength userInfo:nil]);				
+ 				dataReadBlock(nil, [NSError errorWithDomain:NSPOSIXErrorDomain code:readLength userInfo:nil]);				
 				cleanup();
 				return;
 			}
@@ -55,7 +55,7 @@
             
 			if(eof){
 				dispatch_async(dispatch_get_main_queue(), ^{
-					handler([[data retain] autorelease], nil);
+					dataReadBlock([[data retain] autorelease], nil);
 				});
 				
 				cleanup();

@@ -10,6 +10,6 @@
 
 @interface NSFileManager (BKAdditions)
 
--(void)getContentsAtPath:(NSString *)path handler:(BKDataReadBlock)handler;
+-(void)getContentsAtPath:(NSString *)path withBlock:(BKDataReadBlock)block;
 
 @end
